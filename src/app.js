@@ -42,6 +42,24 @@ function searchInput(event) {
 let searchButtonElement = selectElement("#search-button");
 searchButtonElement.addEventListener("click", searchInput);
 
+function transformToFahrenheit() {
+	let temperature = selectElement("#temperature");
+	let fahrenheitTemperature = Math.round(temperature.innerHTML * 1.8 + 32);
+	temperature.innerHTML = fahrenheitTemperature;
+}
+
+let fahrenheit = selectElement("#fahrenheit");
+fahrenheit.addEventListener("click", transformToFahrenheit);
+
+function transformToCelcius() {
+	let temperature = selectElement("#temperature");
+	let celciusTemperature = Math.round(((temperature.innerHTML - 32) * 5) / 9);
+	temperature.innerHTML = celciusTemperature;
+}
+
+let celcius = selectElement("#celcius");
+celcius.addEventListener("click", transformToCelcius);
+
 let date = new Date();
 let days = [
 	"Sunday",
