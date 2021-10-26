@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,71 +13,75 @@
 
     <link rel="stylesheet" href="src/style.css">
 </head>
+
 <body>
 
-    <div id="container">
+    <div class="container">
         <div class="weather-app-wrapper">
-            <div class="row">
-                <div class="col-6">
-                    <input 
-                    type="text" 
-                    class="form-control" 
-                    id="search-input" 
-                    placeholder="Enter City">
+            <div class="weather-app">
+                <div class="row" id="search-row">
+                    <div class="col-6">
+                        <input type="search" class="form-control" id="search-input" placeholder="Enter City">
+                    </div>
+                    <div class="col-3">
+                        <input type="submit" class="form-control btn-primary" id="search-button" value="Search">
+                    </div>
                 </div>
-                <div class="col-3">
-                    <input 
-                    type="submit" 
-                    class="form-control btn-primary" 
-                    id="search-button"
-                    value="Search">
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-4">
-                   <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="Partly Cloud" id="partly-cloud">
-                    <p id="temperature">
-                        13
-                        <a href="#" id="celcius">
-                            ℃
-                        </a>
-                        |
-                        <a href="#" id="fahrenheit">
-                            ℉
-                        </a>
-                    </p>
-                              
-                </div>
-                <div class="col-4">
-                    <p id="precipitation">
-                        Precipitation: 2%
-                    </p>
-                    <p id="humidiity">
-                        Humidity: 81%
-                    </p>
-                    <p id="wind">
-                        Wind: 6km/hr
-                    </p>
-                </div>
-                <div class="col-4">
-                    <p id="city">
-                        Melbourne
-                    </p>
-                    <p id="date-time">
+                <ul>
+                    <li>
+                        <h1 id="city">
+                            Melbourne
+                        </h1>
+                    </li>
+                    <li id="date-time">
                         Thursday, 22:51
-                    </p>
-                    <p id="weather-description">
+                    </li>
+
+                    <li id="weather-description">
                         Partly Cloud
-                    </p>
+                    </li>
+                </ul>
+
+                <div class="row" id="weather-row">
+                    <div class="col-7">
+                        <div class="weather-temperature">
+                            <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="Partly Cloud" />
+                            <p id="temperature">13</p>
+                            <div id="units">
+                                <a href="#" id="celcius">
+                                    °C
+                                </a>
+                                |
+                                <a href="#" id="fahrenheit">
+                                    °F
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-5">
+                        <ul>
+
+                            <li id="humidiity">
+                                Humidity: 81%
+                            </li>
+
+                            <li id="wind">
+                                Wind: 6km/hr
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+
             </div>
+            <small id="source"><a
+                    href="https://github.com/carol-junko/vanilla-weather-app/blob/main/index.html">Open-source code
+                    by</a> Carolina Aoki</small>
         </div>
-        <small id="source"><a href="https://github.com/carol-junko/vanilla-weather-app/blob/main/index.html">Open-source code by</a> Carolina Aoki</small>
     </div>
 
 
 
-<script src="src/app.js"></script>    
+    <script src="src/app.js"></script>
 </body>
+
 </html>
