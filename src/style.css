@@ -23,6 +23,7 @@ li {
 	font-weight: 100;
 	color: rgb(135, 135, 135);
 	line-height: 19px;
+	text-transform: capitalize;
 }
 
 small {
@@ -50,25 +51,6 @@ small {
 	width: 1;
 }
 
-#weather-row {
-	margin-top: 10px;
-}
-
-#units {
-	color: #202124;
-	display: inline-block;
-	font-size: 16px;
-	line-height: 24px;
-	margin-top: 6px;
-	padding-left: 6px;
-	vertical-align: top;
-}
-
-#units a {
-	text-decoration: none;
-	color: #202124;
-}
-
 #search-row {
 	margin-bottom: 10px;
 }
@@ -79,6 +61,21 @@ small {
 	display: inline;
 	font-size: 48px;
 	font-weight: 400;
-	line-height: 60px;
+	line-height: 105px;
 	vertical-align: top;
+}
+
+#units {
+	color: #202124;
+	display: inline-block;
+	font-size: 16px;
+	line-height: 68px;
+	margin-top: 6px;
+	padding-left: 6px;
+	vertical-align: top;
+}
+
+#units a {
+	text-decoration: none;
+	color: #202124;
 }
