@@ -25,12 +25,22 @@ function getWeatherInfo(response){
 }
 
 
+function searchInput(event){
+    event.preventDefault();
+    let searchElement = selectElement("#search-input");
+    let city = searchElement.value
+    let apiKey = "de31afd036b8bd58c684a452ffef335f";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
-let city = "Melbourne";
-let apiKey = "de31afd036b8bd58c684a452ffef335f";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(getWeatherInfo);
+}
 
-axios.get(apiUrl).then(getWeatherInfo);
+let searchButtonElement = selectElement("#search-button");
+searchButtonElement.addEventListener("click", searchInput);
+
+
+
+
 
 
 
